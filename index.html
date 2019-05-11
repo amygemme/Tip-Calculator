@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>tip your server!</title>
+</head>
+<body>
+    <p>Tip Calculator:</p>
+
+<div> 
+    <input type="number" id="bill" name="bill" value="100" placeholder="$100" >
+    <label> Enter the amout of the bill </label>
+</div>
+<div> 
+    <input type="number" id="split" name="split" value="1" placeholder="1" >
+    <label> Enter the number of people splitting the tip </label>
+</div>
+<div>
+  <input type="range" id="scale" name="percent"
+         min="0" max="30" start="15" value="20" step="1" onchange="displaytip(this.value);">
+  <div> Tip Percent: <span id="percent"> 0 </span> % </div>
+  <div> Tip Amount: $ <span id="amount"> 0 </span></div>
+</div>
+
+<!-- <div>
+  <input type="range" id="cowbell" name="cowbell" 
+         min="0" max="100" value="90" step="10">
+  <label for="cowbell">Cowbell</label>
+  <output for="foo" onforminput="value = foo.valueAsNumber;"></output>
+
+</div> -->
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<!-- <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input type="text" id="textInput" value=""> -->
