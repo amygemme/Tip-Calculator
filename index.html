@@ -9,14 +9,14 @@
     <title>tip your server!</title>
 </head>
 <body>
-    <p>Tip Calculator:</p>
+    <h1> The Tip Calculator</h1>
 
 <div> 
-    <input type="number" id="bill" name="bill" value="100" placeholder="$100" >
+    <input type="number" id="bill" name="bill" min="0" value="100" placeholder="$100" onchange="displ">
     <label> Enter the amout of the bill </label>
 </div>
 <div> 
-    <input type="number" id="split" name="split" value="1" placeholder="1" >
+    <input type="number" id="split" name="split" value="1" min="1" placeholder="1" onchange="displaytip()">
     <label> Enter the number of people splitting the tip </label>
 </div>
 <div>
@@ -25,7 +25,7 @@
   <div> Tip Percent: <span id="percent"> 0 </span> % </div>
   <div> Tip Amount: $ <span id="amount"> 0 </span></div>
 </div>
-
+<img src="./meme01.jpg" width="500"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></img>
 <!-- <div>
   <input type="range" id="cowbell" name="cowbell" 
          min="0" max="100" value="90" step="10">
