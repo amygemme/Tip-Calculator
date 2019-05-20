@@ -38,12 +38,4 @@ function grabBill() {
     //console.log(bill, "bill")
 }
 
-// var elem = document.querySelector('input[type="range"]');
 
-// var rangevalue = function(){
-//     var newValue = elem.value;
-//     var target = document.querySelector('.tip');
-//     target.innerHTML - newValue;
-// }
-
-// elem.addEventListener("input", rangevalue);

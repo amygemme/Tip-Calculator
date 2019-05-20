@@ -27,10 +27,9 @@ input[type="range"] {
     -webkit-appearance: none;
     width: 400px;
     background-color: green;
-    height: 5px;
+    height: 10px;
     border-radius: 5px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin-top: 20px;
     outline: 0;
 }
 
@@ -86,7 +85,7 @@ body{
     font-size: 5em;
     width: 400px;
     height: 100px;
-    line-height: 60px;
+    line-height: 90px;
     margin: 40px auto;
     /* letter-spacing: -.07em; */
     text-shadow: green 2px 2px 2px;

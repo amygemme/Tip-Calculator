@@ -22,13 +22,27 @@
     <label class="text"> How many people will be splitting the tip? </label>
   <input type="number" id="split" name="split" value="1" min="1" placeholder="1" onchange="displaytip()">
 </div>
-<!-- Display the tip percent -->
-<div>
+
+
+<div> 
+    <label class="text"> Enter the desired tip percent or use the slider below. </label>
+  <input type="number" id="inputTip"  value="15" min="0" placeholder="15" onchange="displaytip(this.value)">
+  <br><label class="text"> Tip Percent: </label>
+
+</div>
+
+
+<div>  
+  <!-- The slider  -->
+    
+    <input type="range" id="scale" name="percent" class="range"
+    min="0" max="30" start="0" value="20" step="1" onchange="displaytip(this.value);">
+
+
+    <!-- Display the tip percent -->
+
   <div class="amt">$ <span id="amount"> 15 </span></div>
   <div class="tip"> <span id="percent">15</span>% </div>
-  <!-- The slider  -->
-  <input type="range" id="scale" name="percent" class="range"
-         min="0" max="30" start="0" value="20" step="1" onchange="displaytip(this.value);">
 </div>
 
 
