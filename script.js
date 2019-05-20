@@ -2,6 +2,9 @@
 
 function displaytip(val) {
     let bill = grabBill();
+    if(typeof(document.getElementById('percent').value) === "undefined"){
+    document.getElementById('percent').value = 15;
+    }
     console.log(document.getElementById('percent').value, "default percent");
     if(val){
     document.getElementById('percent').value = val;
@@ -35,3 +38,12 @@ function grabBill() {
     //console.log(bill, "bill")
 }
 
+// var elem = document.querySelector('input[type="range"]');
+
+// var rangevalue = function(){
+//     var newValue = elem.value;
+//     var target = document.querySelector('.tip');
+//     target.innerHTML - newValue;
+// }
+
+// elem.addEventListener("input", rangevalue);

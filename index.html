@@ -9,32 +9,34 @@
     <title>tip your server!</title>
 </head>
 <body>
+  <div class="wrapper">
+
     <h1> The Tip Calculator</h1>
-
+<!-- Enter the amount of the bill  -->
 <div> 
-    <input type="number" id="bill" name="bill" min="0" value="100" placeholder="$100" onchange="displ">
-    <label> Enter the amout of the bill </label>
+    <label class="text"> How much was the total bill? </label>
+    <input type="number" id="bill" name="bill" min="0" value="100" placeholder="$100" onchange="displaytip()">
 </div>
+<!-- Enter the number of people splitting the check  -->
 <div> 
-    <input type="number" id="split" name="split" value="1" min="1" placeholder="1" onchange="displaytip()">
-    <label> Enter the number of people splitting the tip </label>
+    <label class="text"> How many people will be splitting the tip? </label>
+  <input type="number" id="split" name="split" value="1" min="1" placeholder="1" onchange="displaytip()">
 </div>
+<!-- Display the tip percent -->
 <div>
-  <input type="range" id="scale" name="percent"
-         min="0" max="30" start="15" value="20" step="1" onchange="displaytip(this.value);">
-  <div> Tip Percent: <span id="percent"> 0 </span> % </div>
-  <div> Tip Amount: $ <span id="amount"> 0 </span></div>
+  <div class="amt">$ <span id="amount"> 15 </span></div>
+  <div class="tip"> <span id="percent">15</span>% </div>
+  <!-- The slider  -->
+  <input type="range" id="scale" name="percent" class="range"
+         min="0" max="30" start="0" value="20" step="1" onchange="displaytip(this.value);">
 </div>
+
+
+
 <img src="./meme01.jpg" width="500"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></img>
-<!-- <div>
-  <input type="range" id="cowbell" name="cowbell" 
-         min="0" max="100" value="90" step="10">
-  <label for="cowbell">Cowbell</label>
-  <output for="foo" onforminput="value = foo.valueAsNumber;"></output>
 
-</div> -->
 <script src="script.js"></script>
-
+</div>
 </body>
 </html>
 
