@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>tip your server!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>tip your server!</title>
 </head>
+
 <body>
   <div class="wrapper">
 
     <h1> The Tip Calculator</h1>
-<!-- Enter the amount of the bill  -->
-<div> 
-    <label class="text"> How much was the total bill? </label>
-    <input type="number" id="bill" name="bill" min="0" value="100" placeholder="$100" onchange="displaytip()">
-</div>
-<!-- Enter the number of people splitting the check  -->
-<div> 
-    <label class="text"> How many people will be splitting the tip? </label>
-  <input type="number" id="split" name="split" value="1" min="1" placeholder="1" onchange="displaytip()">
-</div>
+    <!-- Enter the amount of the bill  -->
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+    <div>
+      <label class="text"> How much was the total bill? </label><br>
+      <input type="number" id="bill" name="bill" min="0" value="100" placeholder="$100" onchange="displaytip()">
+    </div>
+    <!-- Enter the number of people splitting the check  -->
+    <div>
+      <label class="text"> How many people will be splitting the tip? </label><br>
+      <input type="number" id="split" name="split" value="1" min="1" placeholder="1" onchange="displaytip()">
+    </div>
 
+    <!-- Enter the desired tip  -->
+    <div>
+      <label class="text"> Enter the desired tip percent or use the slider below. </label><br>
+      <input type="number" id="inputTip" value="15" min="0" placeholder="15" onchange="displaytip(this.value)">
+      <br><label class="text"> Tip Percent: </label>
 
-<div> 
-    <label class="text"> Enter the desired tip percent or use the slider below. </label>
-  <input type="number" id="inputTip"  value="15" min="0" placeholder="15" onchange="displaytip(this.value)">
-  <br><label class="text"> Tip Percent: </label>
+    </div>
 
-</div>
+    <!-- The slider  -->
+    <div>
+      <input type="range" id="scale" name="percent" class="range" min="0" max="30" start="0" value="20" step="1"
+        onchange="displaytip(this.value);">
 
+      <!-- Display the tip percent -->
+    </div>
+  </div>
+  <!-- End the column  -->
+    <!-- Display Results  -->
+    <div class="col-md-6 col-sm-12">
+    <div>
+      <div class="amt">$ <span id="amount"> 15 </span></div>
+      <div class="tip"> <span id="percent">15</span>% </div>
+    </div>
+  </div>
+  <!-- End second column -->
+  </div>  
+  <!-- End Row Class  -->
+ 
+    <img src="./meme01.jpg" width="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+      allowTransparency="true" allow="encrypted-media"></img>
 
-<div>  
-  <!-- The slider  -->
-    
-    <input type="range" id="scale" name="percent" class="range"
-    min="0" max="30" start="0" value="20" step="1" onchange="displaytip(this.value);">
-
-
-    <!-- Display the tip percent -->
-
-  <div class="amt">$ <span id="amount"> 15 </span></div>
-  <div class="tip"> <span id="percent">15</span>% </div>
-</div>
-
-
-
-<img src="./meme01.jpg" width="500"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></img>
-
-<script src="script.js"></script>
-</div>
+    <script src="script.js"></script>
+  </div>
 </body>
+
 </html>
 
 <!-- <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
