@@ -25,7 +25,7 @@ input[type="number"]{
 input[type="range"] {
     display: block;
     -webkit-appearance: none;
-    width: 400px;
+    width: 300px;
     background-color: green;
     height: 10px;
     border-radius: 5px;
